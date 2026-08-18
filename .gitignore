@@ -1,0 +1,15 @@
+# FreeCAD backups
+*.FCBak
+*.FCStd
+*.FCStd1
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+.venv/
+
+# Temporary
+*.tmp
+*.bak
