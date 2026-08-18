@@ -5,6 +5,21 @@ Every section maps directly to a deliverable in the portfolio README.
 
 ---
 
+## Material & Color Assignments
+
+The assembly uses a consistent color scheme across all capture types. Apply these appearances before any recording or export.
+
+| Component | Fusion 360 Appearance | Visual Color | Hex (approx) | Rationale |
+|-----------|----------------------|--------------|---------------|-----------|
+| Crankshaft | Chrome | Gunmetal Blue | #1E3A5F | Anchors the composition, cool technical tone |
+| Pistons | Aluminum - Polished | Burnished Gold | #C9A84C | Warm contrast, reads as machined aluminum catching light |
+| Connecting Rods | Stainless Steel - Polished | Titanium Silver | #8E9099 | Neutral bridge between gold and blue |
+| Wrist Pins | Chrome | Blue Chrome | #1E3A5F | Matches crankshaft, precision-ground bearing surface |
+
+> **Note:** This color scheme follows the alternating light/dark pattern for exploded view readability: bright pistons, dark rods, bright pins, mid-tone crankshaft.
+
+---
+
 ## A. Turntable Rotation Animation
 
 **Purpose:** Hero animation for the README and portfolio landing page.
@@ -35,11 +50,12 @@ Every section maps directly to a deliverable in the portfolio README.
 
 1. Open **Appearances** (right-click the component in the browser > **Appearance**).
 2. Apply the following:
-   - **Crankshaft:** Steel - Polished or Steel - Satin.
-   - **Pistons:** Aluminum - Polished.
-   - **Connecting Rods:** Steel - Dark or Forged Steel.
-   - **Wrist Pins:** Chrome or Bearing Steel.
-3. Ensure no component has the default blue/grey material.
+   - **Crankshaft:** Search "Chrome" > select **Chrome - Satin** or **Chrome - Polished**. If a blue tint is available, use it. Otherwise, apply Chrome and adjust the color to a deep blue-gray (#1E3A5F approximate).
+   - **Pistons:** Search "Aluminum" > select **Aluminum - Polished**. Adjust color to a warm gold/amber tone (#C9A84C approximate).
+   - **Connecting Rods:** Search "Stainless" > select **Stainless Steel - Polished**. Adjust to a neutral silver-grey (#8E9099 approximate).
+   - **Wrist Pins:** Search "Chrome" > select **Chrome - Polished**. Match the crankshaft color (deep blue chrome).
+3. Verify in the viewport: the exploded view should show clear color differentiation between all four component types.
+4. Ensure no component has the default blue/grey material.
 
 ### Background
 
@@ -82,6 +98,15 @@ Every section maps directly to a deliverable in the portfolio README.
 1. Match the isometric angle from the turntable (30-degree elevation, crankshaft left-to-right).
 2. Ensure all 13 components are visible and separated.
 3. Frame the view so there is equal whitespace on all sides.
+
+### Color Coding Verification
+
+Before capturing, verify the color scheme is visible:
+- Crankshaft appears deep blue/chrome
+- Pistons appear gold/burnished
+- Connecting rods appear silver-grey
+- Wrist pins appear blue/chrome (matching crankshaft)
+- No component has the default blue/grey material
 
 ### Annotation (Optional but Recommended)
 
@@ -195,7 +220,8 @@ Every section maps directly to a deliverable in the portfolio README.
 ### Crankshaft Close-Up
 
 1. Hide all components except the crankshaft (right-click > **Isolate**).
-2. Orbit to show:
+2. Ensure Chrome - Polished with blue tint is applied. The journal surfaces should show reflective highlights.
+3. Orbit to show:
    - Main journal surfaces (the smooth cylindrical surfaces that sit in bearings).
    - Crankpin surfaces (the offset journals that connect to the rods).
    - Fillet radii at the transitions between journals and webs.
@@ -206,7 +232,8 @@ Every section maps directly to a deliverable in the portfolio README.
 ### Connecting Rod Close-Up
 
 1. Isolate one connecting rod.
-2. Show two angles:
+2. Ensure Stainless Steel - Polished is applied. The I-beam cross-section should read as matte silver.
+3. Show two angles:
    - **Front view:** I-beam cross-section visible, big end and small end in frame.
    - **Angled view:** Big end bore visible, showing the bearing surface.
 3. Camera: fill the frame, neutral background.
@@ -215,7 +242,8 @@ Every section maps directly to a deliverable in the portfolio README.
 ### Piston Close-Up
 
 1. Isolate one piston.
-2. Orbit to show:
+2. Ensure Aluminum - Polished with gold/amber tint is applied. Ring grooves should catch specular highlights.
+3. Orbit to show:
    - Ring grooves (three grooves for compression and oil control rings).
    - Pin bore (the hole for the wrist pin).
    - Crown surface (top of the piston).
@@ -226,7 +254,8 @@ Every section maps directly to a deliverable in the portfolio README.
 ### Wrist Pin Close-Up
 
 1. Isolate one wrist pin.
-2. Show:
+2. Ensure Chrome - Polished with blue tint is applied. The cylindrical surface should show a mirror-like reflection.
+3. Show:
    - Full cylindrical surface (polished finish).
    - Chamfered edges.
    - Any retaining ring grooves (if modeled).
@@ -377,3 +406,16 @@ Use this checklist before starting any capture session:
 - [ ] Origin is hidden.
 - [ ] Screenshot test: capture a single frame to verify resolution and framing.
 - [ ] Export paths match the repo structure (`assets/animations/`, `assets/images/`, `drawings/`).
+
+---
+
+## Color Scheme Reference
+
+Quick-reference table for re-applying the color scheme in future sessions.
+
+| Component | Search Term | Appearance Name | Color Adjustment |
+|-----------|------------|-----------------|------------------|
+| Crankshaft | "Chrome" | Chrome - Polished | Tint to deep blue (#1E3A5F) |
+| Piston | "Aluminum" | Aluminum - Polished | Tint to warm gold (#C9A84C) |
+| Connecting Rod | "Stainless" | Stainless Steel - Polished | No adjustment needed |
+| Wrist Pin | "Chrome" | Chrome - Polished | Tint to deep blue (#1E3A5F) |

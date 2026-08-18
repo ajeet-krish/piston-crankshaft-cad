@@ -15,21 +15,33 @@ manufacturing-ready documentation, GD&T tolerancing, and planned FEA validation.
       <!-- Turntable animation: 360-degree rotation of the full assembly.
            Isometric view, ~30-degree elevation, white background.
            Steel crankshaft, aluminum pistons, forged steel rods.
-           Smooth 8-second rotation at 600px width. -->
-      <img src="assets/animations/turntable.gif" alt="Turntable rotation of the 4-piston crankshaft assembly" width="480"/>
+           Smooth 8-second rotation at 600px width.
+           TODO: Convert assets/animations/turntable.mov to turntable.gif -->
+      <img src="assets/animations/turntable.mov" alt="Turntable rotation of the 4-piston crankshaft assembly" width="480"/>
       <br/>
       <em>Turntable Rotation</em>
     </td>
     <td align="center">
       <!-- Exploded view: all 13 components separated to show assembly order.
-           Pistons at top, then wrist pins, connecting rods, crankshaft at bottom.
-           Isometric angle matching the turntable. White background, part callouts. -->
+           Blue crankshaft at bottom, silver connecting rods, gold pistons,
+           blue wrist pins. Isometric angle matching the turntable.
+           White background, color-coded component separation. -->
       <img src="assets/images/assembly_exploded.png" alt="Exploded view showing all 13 components of the assembly" width="480"/>
       <br/>
       <em>Exploded View</em>
     </td>
   </tr>
 </table>
+
+---
+
+## Assembly Process
+
+The following animation shows the step-by-step assembly sequence, from individual
+components to the fully constrained assembly:
+
+<!-- Assembly animation: TODO: Convert assets/animations/assembly.mov to assembly.gif -->
+<img src="assets/animations/assembly.mov" alt="Assembly process animation showing step-by-step construction" width="600"/>
 
 ---
 
@@ -57,6 +69,7 @@ component.
 | **GD&T Tolerancing** | ASME Y14.5 datum schemes, form tolerances, and position callouts on the crankshaft |
 | **FEA Validation** | FreeCAD FEM workbench for static stress analysis (planned) |
 | **Manufacturing** | DFM analysis, material selection rationale, process recommendations per component |
+| **Materials** | Crankshaft: Blue chrome (AISI 4340 Steel), Pistons: Burnished gold (A390 Aluminum), Connecting Rods: Titanium silver (4340 Steel, forged), Wrist Pins: Blue chrome (52100 Bearing Steel) |
 | **Documentation** | 2D engineering drawings, BOM, exploded views, section views, turntable animation |
 
 ---
@@ -80,12 +93,12 @@ component.
               | (4340| | (4340| | (4340| | (4340|
               |Forg)| |Forg)| |Forg)| |Forg)|
               +--+--+ +--+--+ +--+--+ +--+--+
-                 |      |      |      |
+                 |      |      |      |      |
               +--+--+ +--+--+ +--+--+ +--+--+
               |Pin  | |Pin  | |Pin  | |Pin  |
               |52100| |52100| |52100| |52100|
               +--+--+ +--+--+ +--+--+ +--+--+
-                 |      |      |      |
+                 |      |      |      |      |
               +--+--+ +--+--+ +--+--+ +--+--+
               |Pist | |Pist | |Pist | |Pist |
               |A390 | |A390 | |A390 | |A390 |
@@ -94,6 +107,20 @@ component.
 
   Cylinder 1    Cyl 2    Cyl 3    Cyl 4
 ```
+
+---
+
+## Component Gallery
+
+| Connecting Rod | Crankshaft |
+|----------------|------------|
+| ![Connecting Rod](assets/images/connecting_rod_detail.png) | ![Crankshaft](assets/images/crankshaft_detail.png) |
+| *I-beam cross-section, big end and small end bores* | *4-throw design, main journals and crankpins* |
+
+| Wrist Pin | Piston |
+|-----------|--------|
+| ![Wrist Pin](assets/images/wrist_pin_detail.png) | ![Piston](assets/images/piston_detail.png) |
+| *52100 bearing steel, chamfered edges* | *A390 aluminum, ring grooves and pin bore* |
 
 ---
 
@@ -112,12 +139,12 @@ component.
 
 ### Material Selection Rationale
 
-| Component | Material | Why This Material |
-|-----------|----------|-------------------|
-| Crankshaft | AISI 4340 Steel | High fatigue strength, excellent machinability, industry-standard for crankshafts. Nickel-chromium-molybdenum alloy provides through-hardenability for uniform journal hardness. |
-| Piston | A390 Aluminum | Low density reduces reciprocating mass. High thermal conductivity dissipates combustion heat. Silicon content provides wear resistance against cylinder walls. |
-| Connecting Rod | 4340 Steel (Forged) | Forging produces grain flow that follows the load path from small end to big end, improving fatigue resistance over machined-from-bar stock. |
-| Wrist Pin | 52100 Bearing Steel | High carbon-chromium steel achieves 60-64 HRC hardness. Excellent wear resistance and surface finish for the oscillating bearing interface. |
+| Component | Material | Visual Finish | Why This Material |
+|-----------|----------|---------------|-------------------|
+| Crankshaft | AISI 4340 Steel | Blue chrome | High fatigue strength, excellent machinability, industry-standard for crankshafts. Nickel-chromium-molybdenum alloy provides through-hardenability for uniform journal hardness. |
+| Piston | A390 Aluminum | Burnished gold | Low density reduces reciprocating mass. High thermal conductivity dissipates combustion heat. Silicon content provides wear resistance against cylinder walls. |
+| Connecting Rod | 4340 Steel (Forged) | Titanium silver | Forging produces grain flow that follows the load path from small end to big end, improving fatigue resistance over machined-from-bar stock. |
+| Wrist Pin | 52100 Bearing Steel | Blue chrome | High carbon-chromium steel achieves 60-64 HRC hardness. Excellent wear resistance and surface finish for the oscillating bearing interface. |
 
 ### Process Summary
 
@@ -165,6 +192,18 @@ Planned structural validation using FreeCAD FEM workbench:
 
 ---
 
+## Media Assets
+
+| Asset | Format | Description |
+|-------|--------|-------------|
+| Turntable rotation | MOV | 360-degree view of the full assembly |
+| Assembly process | MOV | Step-by-step assembly animation |
+| Crankshaft rotation | MOV | Functioning assembly showing piston reciprocation |
+| Exploded view | PNG | Color-coded component separation |
+| Component details | PNG | Individual part close-ups (4 images) |
+
+---
+
 ## Tech Stack
 
 | Tool | Purpose |
@@ -187,17 +226,15 @@ piston-crankshaft-cad/
 |-- .gitignore
 |-- assets/
 |   |-- animations/
-|   |   |-- turntable.gif              # 360-degree rotation (web-optimized)
-|   |   |-- crankshaft_rotation.mov    # Source animation
-|   |   |-- crankshaft_animated.mp4    # Secondary animation source
+|   |   |-- turntable.mov              # 360-degree rotation (to be converted to GIF)
+|   |   |-- assembly.mov               # Assembly process animation (to be converted to GIF)
+|   |   |-- crankshaft_rotation.mov    # Functioning assembly motion (to be converted to GIF)
 |   |-- images/
-|   |   |-- assembly_exploded.png      # Exploded view
-|   |   |-- section_view.png           # Cross-section cutaway
-|   |   |-- crankshaft_detail.png      # Crankshaft close-up
+|   |   |-- assembly_exploded.png      # Color-coded exploded view
 |   |   |-- connecting_rod_detail.png  # Connecting rod close-up
+|   |   |-- crankshaft_detail.png      # Crankshaft close-up
 |   |   |-- piston_detail.png          # Piston close-up
 |   |   |-- wrist_pin_detail.png       # Wrist pin close-up
-|   |   |-- bom_table.png              # BOM screenshot
 |   |-- cad/
 |       |-- crankshaft_assembly.step   # STEP export for cross-platform use
 |-- drawings/
