@@ -1,13 +1,20 @@
 # Piston-Crankshaft CAD Assembly
 
-Mechanical design portfolio project: a 4-piston inline crankshaft assembly with
-manufacturing-ready documentation, GD&T tolerancing, and planned FEA validation.
+Mechanical design portfolio project: a 4-piston inline crankshaft assembly with manufacturing-ready documentation, GD&T tolerancing, and planned FEA validation.
 
 **Badges:** `Fusion 360` | `FreeCAD` | `ASME Y14.5` | `Mechanical Design`
 
 ---
 
 ## Demo
+
+<!-- Hero animation: crankshaft rotation showing functioning assembly motion.
+     Pistons reciprocate, connecting rods pivot, crankshaft rotates.
+     Blue chrome crankshaft, gold pistons, silver rods, blue pins.
+     TODO: Convert assets/animations/crankshaft_rotation.mov to crankshaft_rotation.gif -->
+<img src="assets/animations/crankshaft_rotation.mov" alt="Crankshaft rotation showing functioning 4-piston assembly motion" width="100%"/>
+
+<p align="center"><em>Functioning assembly: crankshaft rotation with piston reciprocation</em></p>
 
 <table>
   <tr>
@@ -37,8 +44,7 @@ manufacturing-ready documentation, GD&T tolerancing, and planned FEA validation.
 
 ## Assembly Process
 
-The following animation shows the step-by-step assembly sequence, from individual
-components to the fully constrained assembly:
+The following animation shows the step-by-step assembly sequence, from individual components to the fully constrained assembly:
 
 <!-- Assembly animation: TODO: Convert assets/animations/assembly.mov to assembly.gif -->
 <img src="assets/animations/assembly.mov" alt="Assembly process animation showing step-by-step construction" width="600"/>
@@ -47,17 +53,7 @@ components to the fully constrained assembly:
 
 ## Why This Project
 
-This project demonstrates the complete mechanical design workflow from parametric
-CAD modeling through manufacturing-ready documentation. A 13-component inline
-piston-crankshaft assembly is designed in Fusion 360 with fully constrained
-mates, realistic material assignments, and a bill of materials. The deliverables
-include 2D engineering drawings with ASME Y14.5 GD&T callouts, exploded and
-section views for assembly communication, and a structured asset pipeline for
-web-optimized portfolio visuals. The crankshaft GD&T scheme establishes datum
-reference frames, specifies form and position tolerances on bearing surfaces, and
-defines runout limits critical to engine balancing. Planned extensions include
-FreeCAD FEM stress validation and design-for-manufacturing analysis for each
-component.
+This project demonstrates the complete mechanical design workflow from parametric CAD modeling through manufacturing-ready documentation. A 13-component inline piston-crankshaft assembly is designed in Fusion 360 with fully constrained mates, realistic material assignments, and a bill of materials. The deliverables include 2D engineering drawings with ASME Y14.5 GD&T callouts, exploded and section views for assembly communication, and a structured asset pipeline for web-optimized portfolio visuals. The crankshaft GD&T scheme establishes datum reference frames, specifies form and position tolerances on bearing surfaces, and defines runout limits critical to engine balancing. Planned extensions include FreeCAD FEM stress validation and design-for-manufacturing analysis for each component.
 
 ---
 
@@ -68,45 +64,9 @@ component.
 | **CAD Modeling** | 13-component parametric assembly in Fusion 360 with fully constrained mates |
 | **GD&T Tolerancing** | ASME Y14.5 datum schemes, form tolerances, and position callouts on the crankshaft |
 | **FEA Validation** | FreeCAD FEM workbench for static stress analysis (planned) |
-| **Manufacturing** | DFM analysis, material selection rationale, process recommendations per component |
+| **Manufacturing** | DFM analysis, material selection rationale, process recommendations per component (planned) |
 | **Materials** | Crankshaft: Blue chrome (AISI 4340 Steel), Pistons: Burnished gold (A390 Aluminum), Connecting Rods: Titanium silver (4340 Steel, forged), Wrist Pins: Blue chrome (52100 Bearing Steel) |
 | **Documentation** | 2D engineering drawings, BOM, exploded views, section views, turntable animation |
-
----
-
-## Assembly Architecture
-
-```
-                        +-----------+
-                        | Flywheel  |
-                        +-----+-----+
-                              |
-              +---------------+---------------+
-              |          CRANKSHAFT           |
-              |  (AISI 4340 Steel, 1 pc)     |
-              +--+------+------+------+------+--+
-                 |      |      |      |      |
-           Throw 1  Throw 2  Throw 3  Throw 4
-                 |      |      |      |      |
-              +--+--+ +--+--+ +--+--+ +--+--+
-              | Rod | | Rod | | Rod | | Rod |
-              | (4340| | (4340| | (4340| | (4340|
-              |Forg)| |Forg)| |Forg)| |Forg)|
-              +--+--+ +--+--+ +--+--+ +--+--+
-                 |      |      |      |      |
-              +--+--+ +--+--+ +--+--+ +--+--+
-              |Pin  | |Pin  | |Pin  | |Pin  |
-              |52100| |52100| |52100| |52100|
-              +--+--+ +--+--+ +--+--+ +--+--+
-                 |      |      |      |      |
-              +--+--+ +--+--+ +--+--+ +--+--+
-              |Pist | |Pist | |Pist | |Pist |
-              |A390 | |A390 | |A390 | |A390 |
-              |(Al) | |(Al) | |(Al) | |(Al) |
-              +-----+ +-----+ +-----+ +-----+
-
-  Cylinder 1    Cyl 2    Cyl 3    Cyl 4
-```
 
 ---
 
@@ -157,7 +117,7 @@ component.
 
 ---
 
-## GD&T Summary
+## GD&T Summary (In progress)
 
 Planned GD&T callouts for the crankshaft (ASME Y14.5-2018):
 
@@ -172,11 +132,9 @@ Planned GD&T callouts for the crankshaft (ASME Y14.5-2018):
 | Overall runout | Circular runout | 0.030 mm | A, B | Engine balance requirement |
 | Keyway width | Position | 0.050 mm | A, B, C | Timing gear indexing accuracy |
 
-*GD&T application in progress -- crankshaft drawings with ASME Y14.5 callouts coming soon.*
-
 ---
 
-## FEA Analysis
+## FEA Analysis (In progress)
 
 Planned structural validation using FreeCAD FEM workbench:
 
@@ -187,8 +145,6 @@ Planned structural validation using FreeCAD FEM workbench:
 | Safety factor | > 2.0 | Planned |
 | Mesh type | Second-order tetrahedral (C3D10) | Planned |
 | Boundary conditions | Fixed main journals, 5 kN load on crankpin | Planned |
-
-*FEA analysis in progress -- FreeCAD FEM stress validation coming soon.*
 
 ---
 
@@ -221,7 +177,6 @@ Planned structural validation using FreeCAD FEM workbench:
 ```
 piston-crankshaft-cad/
 |-- README.md                          # This file
-|-- CAPTURE_GUIDE.md                   # Fusion 360 capture instructions
 |-- LICENSE                            # MIT License
 |-- .gitignore
 |-- assets/
