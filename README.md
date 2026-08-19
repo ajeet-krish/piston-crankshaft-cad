@@ -10,9 +10,8 @@ Mechanical design portfolio project: a 4-piston inline crankshaft assembly with 
 
 <!-- Hero animation: crankshaft rotation showing functioning assembly motion.
      Pistons reciprocate, connecting rods pivot, crankshaft rotates.
-     Blue chrome crankshaft, gold pistons, silver rods, blue pins.
-     TODO: Convert assets/animations/crankshaft_rotation.mov to crankshaft_rotation.gif -->
-<img src="assets/animations/crankshaft_rotation.mov" alt="Crankshaft rotation showing functioning 4-piston assembly motion" width="100%"/>
+     Blue chrome crankshaft, gold pistons, silver rods, blue pins. -->
+<img src="assets/animations/crankshaft_rotation.gif" alt="Crankshaft rotation showing functioning 4-piston assembly motion" width="100%"/>
 
 <p align="center"><em>Functioning assembly: crankshaft rotation with piston reciprocation</em></p>
 
@@ -22,9 +21,8 @@ Mechanical design portfolio project: a 4-piston inline crankshaft assembly with 
       <!-- Turntable animation: 360-degree rotation of the full assembly.
            Isometric view, ~30-degree elevation, white background.
            Steel crankshaft, aluminum pistons, forged steel rods.
-           Smooth 8-second rotation at 600px width.
-           TODO: Convert assets/animations/turntable.mov to turntable.gif -->
-      <img src="assets/animations/turntable.mov" alt="Turntable rotation of the 4-piston crankshaft assembly" width="480"/>
+           Smooth rotation at 600px width. -->
+      <img src="assets/animations/turntable.gif" alt="Turntable rotation of the 4-piston crankshaft assembly" width="480"/>
       <br/>
       <em>Turntable Rotation</em>
     </td>
