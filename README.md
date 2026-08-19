@@ -1,8 +1,11 @@
 # Piston-Crankshaft CAD Assembly
 
-Mechanical design portfolio project: a 4-piston inline crankshaft assembly with manufacturing-ready documentation, GD&T tolerancing, and planned FEA validation.
+A 4-cylinder inline piston-crankshaft assembly modeled in Autodesk Fusion 360. The crankshaft converts reciprocating piston motion into rotational output through connecting rods and wrist pins, the core mechanism in automotive and small aircraft engines. This project covers parametric CAD modeling, ASME Y14.5 GD&T tolerancing, material selection, manufacturing analysis, and planned FreeCAD FEA validation.
 
-**Badges:** `Fusion 360` | `FreeCAD` | `ASME Y14.5` | `Mechanical Design`
+<p align="center">
+  <img src="https://img.shields.io/badge/Autodesk_Fusion-FF8C00?style=flat-square&logo=autodesk&logoColor=white" />
+  <img src="https://img.shields.io/badge/FreeCAD-F60?style=flat-square&logo=freecad&logoColor=white" />
+</p>
 
 ---
 
@@ -17,21 +20,13 @@ Mechanical design portfolio project: a 4-piston inline crankshaft assembly with 
 
 <table>
   <tr>
-    <td align="center">
-      <!-- Turntable animation: 360-degree rotation of the full assembly.
-           Isometric view, ~30-degree elevation, white background.
-           Steel crankshaft, aluminum pistons, forged steel rods.
-           Smooth rotation at 600px width. -->
-      <img src="assets/animations/turntable.gif" alt="Turntable rotation of the 4-piston crankshaft assembly" width="480"/>
+    <td width="50%" align="center">
+      <img src="assets/animations/turntable.gif" alt="Turntable rotation of the 4-piston crankshaft assembly" width="100%"/>
       <br/>
       <em>Turntable Rotation</em>
     </td>
-    <td align="center">
-      <!-- Exploded view: all 13 components separated to show assembly order.
-           Blue crankshaft at bottom, silver connecting rods, gold pistons,
-           blue wrist pins. Isometric angle matching the turntable.
-           White background, color-coded component separation. -->
-      <img src="assets/images/assembly_exploded.png" alt="Exploded view showing all 13 components of the assembly" width="480"/>
+    <td width="50%" align="center">
+      <img src="assets/images/assembly_exploded.png" alt="Exploded view showing all 13 components of the assembly" width="100%"/>
       <br/>
       <em>Exploded View</em>
     </td>
@@ -40,18 +35,24 @@ Mechanical design portfolio project: a 4-piston inline crankshaft assembly with 
 
 ---
 
+## Project Summary
+
+This is a 4-cylinder inline piston-crankshaft assembly, the core rotating mechanism found in most automotive and small aircraft engines. The crankshaft converts the reciprocating linear motion of four pistons into continuous rotational motion through connecting rods and wrist pins. As each piston reaches top dead center and fires, the force travels through the wrist pin and connecting rod to push the crankshaft throw, generating torque at the output flange.
+
+The assembly consists of 13 components: one 4-throw crankshaft, four pistons with ring grooves for compression and oil control, four connecting rods with I-beam cross-sections for high strength-to-weight ratio, and four wrist pins that form the oscillating bearing interface between piston and rod. The crankshaft is supported by five main journals that sit in engine block bearings, with four crankpin journals offset from the main axis to create the reciprocating stroke.
+
+In a real engine, this assembly operates at 3000-6000 RPM under combustion pressures exceeding 10 MPa per cylinder. The crankshaft must withstand cyclic bending and torsional loads for hundreds of millions of cycles without fatigue failure. Material selection, journal tolerances, fillet radii, and surface finish directly determine engine reliability and lifespan.
+
+This project models the assembly in Fusion 360 with parametric constraints, realistic material assignments, and a complete bill of materials. The design decisions documented here cover material selection (AISI 4340 steel for the crankshaft, A390 aluminum for pistons, forged 4340 for rods, 52100 bearing steel for wrist pins), manufacturing process recommendations (CNC turning, forging, centerless grinding), and surface finish requirements for each bearing interface. ASME Y14.5 GD&T callouts on the crankshaft define datum reference frames, cylindricity and position tolerances on journals, and runout limits critical to engine balancing. Planned extensions include FreeCAD FEM stress validation under combined torsional and bending loads.
+
+---
+
 ## Assembly Process
 
 The following animation shows the step-by-step assembly sequence, from individual components to the fully constrained assembly:
 
 <!-- Assembly animation: step-by-step sequence from individual components to fully constrained assembly -->
-<img src="assets/animations/assembly.mp4" alt="Assembly process animation showing step-by-step construction" width="600"/>
-
----
-
-## Why This Project
-
-This project demonstrates the complete mechanical design workflow from parametric CAD modeling through manufacturing-ready documentation. A 13-component inline piston-crankshaft assembly is designed in Fusion 360 with fully constrained mates, realistic material assignments, and a bill of materials. The deliverables include 2D engineering drawings with ASME Y14.5 GD&T callouts, exploded and section views for assembly communication, and a structured asset pipeline for web-optimized portfolio visuals. The crankshaft GD&T scheme establishes datum reference frames, specifies form and position tolerances on bearing surfaces, and defines runout limits critical to engine balancing. Planned extensions include FreeCAD FEM stress validation and design-for-manufacturing analysis for each component.
+<img src="assets/animations/assembly.gif" alt="Assembly process animation showing step-by-step construction" width="600"/>
 
 ---
 
