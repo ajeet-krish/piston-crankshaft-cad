@@ -44,8 +44,8 @@ Mechanical design portfolio project: a 4-piston inline crankshaft assembly with 
 
 The following animation shows the step-by-step assembly sequence, from individual components to the fully constrained assembly:
 
-<!-- Assembly animation: TODO: Convert assets/animations/assembly.mov to assembly.gif -->
-<img src="assets/animations/assembly.mov" alt="Assembly process animation showing step-by-step construction" width="600"/>
+<!-- Assembly animation: step-by-step sequence from individual components to fully constrained assembly -->
+<img src="assets/animations/assembly.mp4" alt="Assembly process animation showing step-by-step construction" width="600"/>
 
 ---
 
